@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_dash_gray_400_rounded_8"
+    android:id="@+id/llUpload"
+    android:layout_width="@dimen/_96dp"
+    android:layout_height="@dimen/_80dp"
+    android:gravity="center"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center"
+        android:id="@+id/ivPlus"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
+        app:srcCompat="@drawable/ic_plus_gray_32"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_upload"
+        android:textSize="@dimen/_13sp"
+        android:textColor="@color/gray_500"
+        app:fontFamily="@font/inter_18pt_regular"/>
+</LinearLayout>

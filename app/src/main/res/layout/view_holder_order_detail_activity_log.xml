@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CardViewStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_activity_log_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="ACTIVITY LOG"
+                android:textSize="@dimen/_14sp"
+                android:textColor="@color/gray_500"
+                app:fontFamily="@font/inter_18pt_medium" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivArrowDown"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_arrow_down" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/llActivityLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_6dp"
+                    android:layout_height="@dimen/_6dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_gray_bullet" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Acceptance:"
+                    app:fontFamily="@font/inter_18pt_regular"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/gray_500"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_acceptance_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2024-07-07 20:30"
+                    app:fontFamily="@font/inter_18pt_regular"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/gray_800" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_6dp"
+                    android:layout_height="@dimen/_6dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_gray_bullet" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Acceptance:"
+                    app:fontFamily="@font/inter_18pt_regular"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/gray_500"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2024-07-07 20:30"
+                    app:fontFamily="@font/inter_18pt_regular"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/gray_800" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_6dp"
+                    android:layout_height="@dimen/_6dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_gray_bullet" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Acceptance:"
+                    app:fontFamily="@font/inter_18pt_regular"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/gray_500"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2024-07-07 20:30"
+                    app:fontFamily="@font/inter_18pt_regular"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/gray_800" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

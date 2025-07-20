@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/_4dp"
+        android:textColor="@color/gray_700"
+        android:textSize="@dimen/_12sp"
+        app:fontFamily="@font/inter_18pt_regular"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2024/12/21\n20:30"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="@dimen/_1dp"
+        android:layout_height="0dp"
+        android:background="@color/gray_400"
+        app:layout_constraintBottom_toTopOf="@id/dot"
+        app:layout_constraintEnd_toEndOf="@id/dot"
+        app:layout_constraintStart_toStartOf="@id/dot"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/gray_400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/dot"
+        app:layout_constraintStart_toStartOf="@id/dot"
+        app:layout_constraintTop_toBottomOf="@id/dot" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dot"
+        android:layout_width="@dimen/_12dp"
+        android:layout_height="@dimen/_12dp"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_32dp"
+        android:src="@drawable/dot_shape"
+        app:layout_constraintStart_toEndOf="@id/textViewTimestamp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/textViewStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/gray_800"
+        android:textSize="@dimen/_13sp"
+        app:fontFamily="@font/inter_18pt_regular"
+        app:layout_constraintBottom_toBottomOf="@id/dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dot"
+        app:layout_constraintTop_toTopOf="@id/dot"
+        tools:text="Order Delivered Successfully" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/tvDetailsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_500"
+        android:textSize="@dimen/_12sp"
+        app:fontFamily="@font/inter_18pt_regular"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textViewStatus"
+        android:text="@string/order_detail_deliver_order_label" />
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvActivityLogImages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:itemCount="3"
+        app:spanCount="2"
+        tools:listitem="@layout/view_holder_shipping_receipt_item"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailsLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvDetailsLabel"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

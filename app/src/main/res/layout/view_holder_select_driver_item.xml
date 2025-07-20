@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tvNumber"
+        android:layout_width="@dimen/_24dp"
+        android:layout_height="@dimen/_24dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/ic_checkmark_green_circle_24" />
+
+    <LinearLayout
+        android:paddingVertical="@dimen/_8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDriverId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_18pt_medium"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="XCSKD501250416-002"
+            android:textColor="@color/gray_800"
+            android:textSize="@dimen/_14sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDriverLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_18pt_regular"
+            android:maxLines="2"
+            android:text="Create at: 2024-07-07 14:00"
+            android:textColor="@color/gray_500"
+            android:textSize="@dimen/_12sp" />
+    </LinearLayout>
+</LinearLayout>

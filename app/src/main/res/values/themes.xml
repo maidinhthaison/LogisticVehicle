@@ -1,0 +1,157 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Linkon" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+<!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
+        <item name="android:statusBarColor">@color/primary_500</item>
+        <item name="android:windowTranslucentStatus">false</item> <!-- Optional -->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Customize your theme here. -->
+        <item name="materialAlertDialogTheme">@style/App.MaterialAlertDialog.Rounded</item>
+    </style>
+
+    <!-- Text input layout register screen -->
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeWidthFocused">@dimen/_1dp</item>
+        <item name="boxStrokeColor">@color/custom_box_stroke_color</item>
+        <item name="boxStrokeWidth">@dimen/_1dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_8dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_8dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_8dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_8dp</item>
+        <item name="boxBackgroundColor">@color/base_white</item>
+    </style>
+
+    <!-- Rounded Button -->
+    <style name="Widget.App.Button.Primary.Rounded" parent="Widget.MaterialComponents.Button">
+        <!-- Background Color -->
+        <item name="android:backgroundTint">@color/primary_500</item>
+
+        <item name="cornerRadius">@dimen/_30dp</item>
+
+        <!-- Text Appearance (Font Size, Font Family, etc.) -->
+        <item name="android:textAppearance">@style/TextAppearance.App.Button</item>
+    </style>
+
+    <style name="TextAppearance.App.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:elevation">@dimen/_1dp</item>
+        <item name="android:fontFamily">@font/inter_24pt_medium</item>
+        <!-- Text Color -->
+        <item name="android:textColor">@color/base_white</item>
+    </style>
+    <!-- Checkbox -->
+    <style name="Widget.App.MaterialCheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="android:textAppearance">@style/TextAppearance.App.Checkbox</item>
+        <item name="buttonTint">@color/checkbox_dynamic_tint</item>
+        <item name="useMaterialThemeColors">false</item>
+<!--        <item name="rippleColor">#80E0FF</item>-->
+    </style>
+
+    <style name="TextAppearance.App.Checkbox" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:fontFamily">@font/inter_24pt_regular</item>
+    </style>
+
+    <!--Toolbar-->
+    <style name="ToolbarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="background">@android:color/transparent</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:fontFamily">@font/inter_18pt_medium</item>
+    </style>
+    <!--Toolbar Order Screen-->
+
+    <style name="ToolbarOrderTitleStyle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="fontFamily">@font/inter_18pt_black_italic</item>
+        <item name="android:fontFamily">@font/inter_18pt_black_italic</item>
+        <item name="android:textColor">@color/base_white</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- Normal Toolbar-->
+    <style name="NormalToolbarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="background">@android:color/transparent</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="fontFamily">@font/inter_18pt_regular</item>
+        <item name="android:fontFamily">@font/inter_18pt_regular</item>
+    </style>
+
+<!--    Bottom View-->
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/BottomNavigationLabelStyle</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationLabelStyle</item>
+    </style>
+
+    <style name="BottomNavigationLabelStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/_11sp</item>
+        <item name="android:fontFamily">@font/inter_18pt_medium</item>
+    </style>
+
+    <!-- Card View-->
+    <style name="CardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/_8dp</item>
+        <item name="cardElevation">@dimen/_2dp</item>
+        <item name="strokeColor">@color/gray_200</item>
+        <item name="strokeWidth">@dimen/_1dp</item>
+    </style>
+
+    <!--Dialog-->
+    <style name="App.MaterialAlertDialog.Rounded" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.CornerFamilyRounded</item>
+    </style>
+
+    <style name="ShapeAppearance.App.CornerFamilyRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_12dp</item> </style>
+   <!-- ShapeableImageView-->
+    <style name="ShapeAppearanceOverlay.App.CornerSize8dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_8dp</item>
+    </style>
+
+    <!-- Custom style for TabLayout text appearance -->
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:fontFamily">@font/inter_18pt_medium</item>
+        <item name="textAllCaps">false</item>
+
+    </style>
+
+    <style name="CustomSelectedTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:fontFamily">@font/inter_18pt_medium</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!--Bottom Sheet-->
+    <style name="BottomSheetDialogRounded" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/RoundedShapeAppearance</item>
+    </style>
+
+    <style name="RoundedShapeAppearance" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_16dp</item>
+        <item name="cornerSizeTopRight">@dimen/_16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+</resources>

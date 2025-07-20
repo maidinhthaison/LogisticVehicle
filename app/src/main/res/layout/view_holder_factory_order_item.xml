@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/_8dp"
+    android:layout_marginBottom="@dimen/_16dp"
+    style="@style/CardViewStyle">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:weightSum="5"
+            android:paddingHorizontal="@dimen/_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_12dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:background="@drawable/bg_primary_400_circle"
+                android:gravity="center"
+                android:text="No."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sp"
+                android:fontFamily="@font/inter_18pt_semi_bold"
+                tools:text="No." />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_weight="3.5">
+                <com.google.android.material.textview.MaterialTextView
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:id="@+id/tvOrderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/gray_800"
+                    android:fontFamily="@font/inter_18pt_medium"
+                    android:text="XCSKD501250416-002" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:id="@+id/tvCreatedAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sp"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/inter_18pt_regular"
+                    android:text="Create at: 2024-07-07 14:00" />
+            </LinearLayout>
+
+            <View android:background="@color/gray_200"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginVertical="@dimen/_7dp"
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_secondary_50_rounded_4"
+                android:id="@+id/tvPrice"
+                android:layout_weight="1.5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30dp"
+                android:textSize="@dimen/_14sp"
+                android:textColor="@color/secondary_600"
+                android:fontFamily="@font/inter_18pt_medium"
+                android:text="$550.000"/>
+        </LinearLayout>
+        <View
+            android:layout_marginVertical="@dimen/_8dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3dp"
+            android:background="@drawable/bg_dash"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_12dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- Checkpoint-->
+                <LinearLayout
+                    android:id="@+id/factoryA_section"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvLocation"
+                        android:layout_width="@dimen/_24dp"
+                        android:layout_height="@dimen/_24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_8dp"
+                        android:src="@drawable/ic_location_green_24" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvFactoryName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_13sp"
+                            android:fontFamily="@font/inter_18pt_medium"
+                            android:textColor="@color/gray_700"
+                            tools:text="Factory A"
+                            android:text="Factory A"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:id="@+id/tvFactoryAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_13sp"
+                            android:textColor="@color/gray_600"
+                            android:fontFamily="@font/inter_18pt_regular"
+                            tools:text="425 S. Palos Verdes Street, San Pedro, CA"
+                            android:text="425 S. Palos Verdes Street, San Pedro, CA"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dotted_line"
+                    android:layout_width="@dimen/_2dp"
+                    android:layout_height="@dimen/_14dp"
+                    app:srcCompat="@drawable/bg_vertical_dash_line"
+                    android:layout_marginStart="@dimen/_10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/factoryA_section"
+                    app:layout_constraintBottom_toTopOf="@id/destination_section" />
+                <!--Flag-->
+                <LinearLayout
+                    android:id="@+id/destination_section"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/factoryA_section"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_24dp"
+                        android:layout_height="@dimen/_24dp"
+                        android:src="@drawable/ic_flag_orange_24"
+                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center_vertical" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:id="@+id/tvFactoryCheckPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_13sp"
+                        android:textColor="@color/primary_500"
+                        android:fontFamily="@font/inter_18pt_regular"
+                        tools:text="24208 San Michele Road, 92551, United States"
+                        android:text="24208 San Michele Road, 92551, United States"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Container truck-->
+
+            <LinearLayout
+                android:paddingVertical="@dimen/_8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    app:srcCompat="@drawable/ic_truck_gray_24"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:background="@drawable/bg_gray_200_rounded"
+                    android:padding="@dimen/_4dp"
+                    android:id="@+id/tvContainerTruck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:textSize="@dimen/_13sp"
+                    android:textColor="@color/gray_800"
+                    android:fontFamily="@font/inter_18pt_regular"
+                    tools:text="Container Truck"
+                    android:text="Container Truck"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:background="@drawable/bg_gray_200_rounded"
+                    android:padding="@dimen/_4dp"
+                    android:id="@+id/tvContainerTruckCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:textSize="@dimen/_13sp"
+                    android:textColor="@color/gray_800"
+                    android:fontFamily="@font/inter_18pt_regular"
+                    tools:text="1234 T 567 "
+                    android:text="1234 T 567 "/>
+
+            </LinearLayout>
+
+            <!--            Transport date-->
+
+            <LinearLayout
+                android:paddingVertical="@dimen/_8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    app:srcCompat="@drawable/ic_truck_transport_date_24"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:paddingVertical="@dimen/_4dp"
+                    android:paddingHorizontal="@dimen/_6dp"
+                    android:id="@+id/tvTransportDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:textSize="@dimen/_13sp"
+                    android:textColor="@color/gray_800"
+                    android:fontFamily="@font/inter_18pt_regular"
+                    tools:text="Transport date:"
+                    android:text="Transport date:"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:paddingVertical="@dimen/_4dp"
+                    android:id="@+id/tvTransportDateValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="@dimen/_13sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter_18pt_regular"
+                    tools:text="June 20, 2025"
+                    android:text="June 20, 2025"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--Action  button-->
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:paddingHorizontal="@dimen/_12dp">
+            <com.google.android.material.button.MaterialButton
+                android:visibility="gone"
+                android:background="@drawable/bg_primary_500_rounded_24"
+                app:backgroundTint="@null"
+                android:id="@+id/btnUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_12dp"
+                android:gravity="center"
+                android:text="@string/common_accept"
+                android:textColor="@color/base_white"
+                android:fontFamily="@font/inter_18pt_medium"
+                android:textSize="@dimen/_13sp"
+                android:textAllCaps="false"
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

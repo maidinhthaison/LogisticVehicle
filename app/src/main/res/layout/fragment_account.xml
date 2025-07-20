@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.account.AccountFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="@color/neutral_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_500"
+            android:fitsSystemWindows="true"
+            android:paddingHorizontal="@dimen/_8dp"
+            app:elevation="0dp">
+
+            <!-- Header Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_16dp"
+                android:paddingVertical="@dimen/_12dp">
+
+                <!-- Profile Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imvProfile"
+                    android:layout_width="@dimen/_60dp"
+                    android:layout_height="@dimen/_60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_driver_avatar_temp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8dp" />
+
+                <!-- User Info (Name, Phone, Status) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/imvProfile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imvProfile"
+                    app:layout_constraintTop_toTopOf="@id/imvProfile">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDriverName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swift Tom Anderson"
+                        android:textColor="@color/base_white"
+                        android:textSize="@dimen/_16sp"
+                        app:fontFamily="@font/inter_18pt_semi_bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:text="+84 578 982"
+                        android:textColor="@color/base_white"
+                        android:textSize="@dimen/_14sp"
+                        app:fontFamily="@font/inter_18pt_regular" />
+
+                    <!-- "Normal" Status Tag -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:background="@drawable/bg_success_50_rounded_19"
+                        android:paddingHorizontal="@dimen/_8dp"
+                        android:paddingVertical="@dimen/_2dp"
+                        android:text="Normal"
+                        android:textColor="@color/primary_500"
+                        android:textSize="@dimen/_14sp"
+                        app:fontFamily="@font/inter_18pt_medium" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Settings Section -->
+                <LinearLayout
+                    android:elevation="@dimen/_2dp"
+                    android:paddingHorizontal="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:background="@color/base_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8dp">
+
+                    <!-- Allow Notification Item -->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintAllowNotifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/_48dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAllowDisableNoti"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            android:src="@drawable/ic_setting_notification_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_allow_notification_title"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAllowDisableNoti"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_notification"
+                            android:checked="false"
+                            android:layout_width="@dimen/_70dp"
+                            android:layout_height="wrap_content"
+                            android:textOn="YES"
+                            android:textOff="NO"
+                            app:checkedIconEnabled="true"
+                            app:thumbTint="@color/base_white"
+                            app:trackTint="@color/switch_track_color_selector"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Language Item -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/_48dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/icon_language"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            android:src="@drawable/ic_setting_language"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_language_title"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/icon_language"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text_language_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8dp"
+                            android:text="English"
+                            android:textColor="@color/gray_500"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_regular"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/icon_chevron_language"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/icon_chevron_language"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_arrow_next_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <!--Term and privacy-->
+                <LinearLayout
+                    android:elevation="@dimen/_2dp"
+                    android:padding="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:background="@color/base_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Term and privacy-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintTermPrivacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_48dp"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivTermPrivacy"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_setting_term"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:text="@string/account_term_of_use_title"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivTermPrivacy"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_arrow_next_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Privacy Policy -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintPrivacyPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_48dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivLanguage"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            android:src="@drawable/ic_setting_privacy"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_privacy_policy_title"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivLanguage"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_arrow_next_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!--Help Center -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintHelpCenter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_48dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivHelp"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            android:src="@drawable/ic_setting_help"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_help_center_title"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivHelp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_arrow_next_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- About us -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintAboutUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_48dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAboutUs"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            android:src="@drawable/ic_setting_about"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_about_us_title"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivAboutUs"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_arrow_next_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- Contact Us -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintContactUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_48dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivContactUs"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            android:src="@drawable/ic_setting_contact"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvContactUs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_contact_us_title"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivContactUs"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvContactPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8dp"
+                            android:text="1234567890"
+                            android:textColor="@color/gray_700"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <!--Logout-->
+                <LinearLayout
+                    android:elevation="@dimen/_2dp"
+                    android:paddingHorizontal="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:background="@color/base_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_48dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivLogout"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_setting_logout"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:text="@string/account_logout_title"
+                            android:textColor="@color/error_500"
+                            android:textSize="@dimen/_14sp"
+                            app:fontFamily="@font/inter_18pt_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivLogout"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_24dp"
+                            app:srcCompat="@drawable/ic_arrow_next_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/loadingProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="@color/primary_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

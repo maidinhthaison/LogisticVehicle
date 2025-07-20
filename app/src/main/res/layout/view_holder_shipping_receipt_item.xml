@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="@dimen/_96dp"
+    android:layout_height="@dimen/_80dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivShippingReceiptItem"
+        android:layout_width="@dimen/_96dp"
+        android:layout_height="@dimen/_80dp"
+        app:srcCompat="@drawable/ic_shipping_receipt_thumb" />
+</FrameLayout>

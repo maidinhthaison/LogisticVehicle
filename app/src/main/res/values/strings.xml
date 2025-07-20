@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Linkon</string>
+
+
+    <!-- Register screen -->
+    <string name="register_label_company_name">LINKON</string>
+    <string name="register_label_welcome">Welcome To LinKon</string>
+    <string name="register_label_register_instructions">Enter your information to register</string>
+    <string name="register_hint_fullname">Full Name</string>
+    <string name="register_hint_phone">Phone number</string>
+    <string name="register_hint_code">Code</string>
+    <string name="register_label_terms">Please read and agree to the</string>
+    <string name="register_label_terms_link">
+        <![CDATA[
+        <font color="#1D2939">Please read and agree to the</font>
+        <font color="#269640">Terms of Service</font>
+        <font color="#1D2939">and </font>
+        <font color="#269640">Privacy Policy</font>
+        ]]></string>
+    <string name="register_button">Register</string>
+    <string name="register_label_have_account">Already have an account?</string>
+    <string name="register_label_sign_in_link">Sign In</string>
+    <string name="register_get_code_link">Get Code</string>
+    <string name="register_fail_message">Register Fail</string>
+    <string name="register_fail_miss_check_policy">You need check the term of conditions</string>
+    <string name="register_successfully_message">Register successfully</string>
+    <string name="common_choose_coutry">Choose Country</string>
+    <string name="register_fail_code_require_message">Code required!</string>
+    <string name="register_fail_name_require_message">Name required!</string>
+    <string name="register_fail_phone_require_message">Phone required!</string>
+    <string name="register_sms_code_not_match_message">SMS Code not match. Try to get code again</string>
+    <!--Login screen-->
+    <string name="login_label_welcome">Welcome back\u0021 Glad to see you, Again\u0021</string>
+    <string name="login_label_login_instructions">Enter your phone number to receive a code.</string>
+    <string name="login_hint_code">Code</string>
+    <string name="login_hint_phone">Phone number</string>
+    <string name="login_get_code_link">Get Code</string>
+    <string name="login_label_terms">Please read and agree to the</string>
+    <string name="login_label_terms_link">
+        <![CDATA[
+        <font color="#1D2939">Please read and agree to the</font>
+        <font color="#269640">Terms of Service</font>
+        <font color="#1D2939"> and </font>
+        <font color="#269640">Privacy Policy</font>
+        ]]></string>
+    <string name="login_button">Login</string>
+    <string name="login_label_have_account">Don\'t have an account?</string>
+    <string name="login_sign_up_link">Sign Up</string>
+    <string name="login_select_country_code">(%1$s)</string>
+    <string name="login_successfully_message">Login successfully</string>
+    <string name="login_fail_message">Login Fail</string>
+    <string name="login_fail_phone_require_message">Phone required!</string>
+    <string name="login_fail_code_require_message">Code required!</string>
+    <string name="login_sms_code_not_match_message">SMS Code not match. Try to get code again</string>
+    <string name="login_fail_miss_check_policy">You need check the term of conditions</string>
+
+    <!--Navigator menu-->
+    <string name="nav_label_home">Home</string>
+    <string name="nav_label_orders">Orders</string>
+    <string name="nav_label_account">Account</string>
+
+    <!--Order Tab-->
+    <string name="tab_label_queued">Queued</string>
+    <string name="tab_label_in_transit">In Transit</string>
+    <string name="tab_label_complete">Complete</string>
+    <string name="tab_label_cancel">Cancel</string>
+
+    <!--Order Item View-->
+    <string name="order_item_view_price">$%1$s</string>
+    <string name="order_item_view_created_at">Created: %1$s</string>
+
+
+    <!--Common-->
+    <string name="common_cancel">Cancel</string>
+    <string name="common_detail">Detail</string>
+    <string name="common_submit">Submit</string>
+    <string name="common_ok">Ok</string>
+    <string name="common_upload">Upload</string>
+    <string name="common_getline">Get Line</string>
+    <string name="common_incident">Incident</string>
+    <string name="common_accept">Accept</string>
+
+    <string name="common_activity_log_label">Activity Log</string>
+    <string name="common_shipping_receipt_label">Shipping Receipt :</string>
+
+
+    <!--Search-->
+    <string name="search_label_result">%1$s search results</string>
+
+    <!--Order Details-->
+    <string name="order_detail_toolbar_title">Order Details</string>
+    <string name="order_detail_start_navi_button">Start navigating</string>
+    <string name="order_detail_upload_shipping_order_button">Upload the shipping order</string>
+    <string name="order_detail_get_directions_button">Get Directions</string>
+    <string name="order_detail_unload_the_cargo_button">Unload the cargo</string>
+    <string name="order_detail_created_at">Created: %1$s</string>
+    <string name="order_detail_order_no">No. %1$s</string>
+    <string name="order_detail_transport_fee">$%1$s</string>
+    <string name="order_detail_cost_label">Cost:</string>
+    <string name="order_detail_vehicle_label">Vehicle:</string>
+    <string name="order_detail_goods_label">Goods:</string>
+    <string name="order_detail_transport_date_label">Transport date:</string>
+    <string name="order_detail_payment_method_label">Payment method:</string>
+    <string name="order_detail_deliver_order_label">Deliver Order:</string>
+
+
+    <!--Home Fragment-->
+    <string name="home_factory_name_label">Factory A Name</string>
+
+    <!--Upload Image Dialog-->
+    <string name="dialog_upload_image_title">Upload Image</string>
+    <string name="dialog_upload_image_subtitle">Please upload the Shipping Receipt</string>
+
+    <!--Incident report Dialog-->
+    <string name="dialog_incident_report_title">Incident Report</string>
+    <string name="dialog_incident_report_subtitle">Please upload the delivery receipt and photos of the loaded cargo</string>
+    <string name="dialog_incident_report_description_title">Description</string>
+    <string name="dialog_incident_report_description_hint">Engine failure occurred near checkpoint B12</string>
+    <string name="dialog_incident_report_photo_title">Photo: </string>
+    <string name="dialog_incident_report_photo_upload">Upload</string>
+
+    <!-- Incident report Success Dialog-->
+    <string name="dialog_indicdent_report_success_title">Incident reported successfully</string>
+    <string name="dialog_indicdent_report_success_subtitle">A coordinator will reach out to you soon for further assistance.</string>
+
+    <!--Account Fragment-->
+    <string name="account_allow_notification_title">Allow Notification</string>
+    <string name="account_language_title">Language</string>
+    <string name="account_term_of_use_title">Terms of Use</string>
+    <string name="account_privacy_policy_title">Privacy policy</string>
+    <string name="account_help_center_title">Help Center</string>
+    <string name="account_about_us_title">About Us</string>
+    <string name="account_contact_us_title">Contact Us</string>
+    <string name="account_logout_title">Log out</string>
+
+    <!--Dialog Confirm logout -->
+    <string name="dialog_confirm_logout_title">Log out</string>
+    <string name="dialog_confirm_logout_message">Are you sure want to log out</string>
+    <string name="dialog_confirm_logout_button">Log out</string>
+
+    <!--Error-->
+    <string name="message_api_error">API error</string>
+    <string name="error_message_require_field">Required Field!</string>
+
+    <!--Empty Orders-->
+    <string name="empty_order_title">No orders at the moment</string>
+    <string name="empty_order_description">Downward refresh immediately（20）</string>
+    <string name="no_record_description">No records available at the moment</string>
+
+    <!--Tracking live-->
+    <string name="tracking_live_toolbar_title">Track live</string>
+    <string name="map_toolbar_title">Map</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_12dp"
+    android:background="@drawable/bg_order_detail_single_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_55dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/_5dp"
+        android:background="@drawable/bg_order_detail_single_item_white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_5dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <com.google.android.material.textview.MaterialTextView
+                android:paddingTop="@dimen/_8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tvOrderDetailNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:textSize="@dimen/_14sp"
+                android:textColor="@color/gray_800"
+                android:fontFamily="@font/inter_18pt_medium"
+                tools:text="No. XCSKD501250416-004" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:id="@+id/tvOrderDetailCreatedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:textSize="@dimen/_12sp"
+                android:textColor="@color/gray_500"
+                android:fontFamily="@font/inter_18pt_regular"
+                tools:text="Created: 2024-07-07 14:00" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_12dp"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            android:background="@drawable/bg_warning_50_rounded_18"
+            android:id="@+id/tvOrderDetailStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_33dp"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/warning_500"
+            android:fontFamily="@font/inter_18pt_medium"
+            tools:text="Loading" />
+
+    </LinearLayout>
+
+</LinearLayout>

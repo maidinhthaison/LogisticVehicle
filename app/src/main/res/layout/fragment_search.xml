@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="@color/neutral_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:layout_marginTop="@dimen/_106dp"
+            android:visibility="gone"
+            android:id="@+id/layoutNoRecords"
+            layout="@layout/layout_no_records"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            app:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_500"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:elevation="0dp"
+                android:id="@+id/searchToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtSearch"
+                        tools:text="@string/app_name"
+                        android:textColor="@color/base_black"
+                        android:textSize="@dimen/_14sp"
+                        android:fontFamily="@font/inter_18pt_regular"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edittext_rounded_20"
+                        android:drawableStart="@drawable/ic_search_black_24"
+                        android:drawablePadding="@dimen/_4dp"
+                        tools:ignore="PrivateResource" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvCancel"
+                        android:paddingStart="@dimen/_7dp"
+                        android:paddingEnd="@dimen/_16dp"
+                        android:textColor="@color/base_white"
+                        android:textSize="@dimen/_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/common_cancel"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSearchNumberResult"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_label_result"
+                    tools:text="@string/search_label_result"
+                    android:textSize="@dimen/_13sp"
+                    android:textColor="@color/gray_600"
+                    android:fontFamily="@font/inter_18pt_regular"
+                    android:layout_marginVertical="@dimen/_16dp" />
+
+                <!--<include layout="@layout/view_holder_factory_order_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16dp"/>-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSearchOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_24dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:nestedScrollingEnabled="true"
+                    android:overScrollMode="never"
+                    android:layout_marginHorizontal="@dimen/_16dp"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/view_holder_factory_order_item" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:indeterminateTint="@color/primary_500"
+            android:id="@+id/loadingProgress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

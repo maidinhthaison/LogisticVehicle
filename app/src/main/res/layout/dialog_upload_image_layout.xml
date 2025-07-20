@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_12dp"
+    app:cardCornerRadius="@dimen/_12dp"
+    style="@style/CardViewStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_16dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_4dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/dialog_upload_image_title"
+                android:textColor="@color/gray_900"
+                android:textSize="@dimen/_18sp"
+                app:fontFamily="@font/inter_18pt_semi_bold"
+                tools:ignore="RelativeOverlap" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCloseDialog"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_xclose_24" />
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dialog_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:text="@string/dialog_upload_image_subtitle"
+            android:textColor="@color/gray_600"
+            android:textSize="@dimen/_14sp"
+            app:fontFamily="@font/inter_18pt_regular" />
+        <!-- Shipping receipt-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_18pt_medium"
+                android:text="Shipping Receipt : "
+                android:textColor="@color/gray_500"
+                android:textSize="@dimen/_14sp"
+                tools:text="Shipping Receipt : " />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSelectImages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:itemCount="6"
+                app:spanCount="3"
+                tools:listitem="@layout/view_holder_upload_item"
+                android:layout_marginBottom="@dimen/_24dp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:background="@drawable/bg_primary_500_rounded_30"
+            android:fontFamily="@font/inter_18pt_medium"
+            android:text="@string/common_submit"
+            android:textAllCaps="false"
+            android:textColor="@color/base_white"
+            android:textSize="@dimen/_16sp"
+            app:backgroundTint="@null" />
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_detail_activity_navigation"
+    app:startDestination="@id/orderDetailsFragment">
+
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.linkon.ui.orders.detail.OrderDetailsFragment"
+        android:label="OrderDetailsFragment"
+        tools:layout="@layout/fragment_order_detail" >
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_trackLiveFragment"
+            app:destination="@id/trackLiveFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="orderNo"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="ORD"/>
+    </fragment>
+    <fragment
+        android:id="@+id/trackLiveFragment"
+        android:name="com.linkon.ui.maps.TrackLiveFragment"
+        android:label="TrackLiveFragment"
+        tools:layout="@layout/fragment_tracking_live"/>
+</navigation>
